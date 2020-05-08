@@ -115,12 +115,13 @@ function createMap(earthquakes) {
 
     return div;
   };
-
+  
+  //Add boundaries from fraxen github
   legend.addTo(myMap);
   d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json", function(plates) {
 
     L.geoJson(plates, {
-      color: "orange",
+      color: "red",
       weight: 2
     })
     .addTo(tectonicplates);
